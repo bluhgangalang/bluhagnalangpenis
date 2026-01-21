@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bluhgang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <span class="terminal-title">bluhgang@terminal:~$</span>
+            </div>
+            <div class="terminal-body">
+                <pre class="ascii-art">
+    ██████╗ ██╗     ██╗   ██╗██╗  ██╗
+    ██╔══██╗██║     ██║   ██║██║  ██║
+    ██████╔╝██║     ██║   ██║███████║
+    ██╔══██╗██║     ██║   ██║██╔══██║
+    ██████╔╝███████╗╚██████╔╝██║  ██║
+    ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+                </pre>
+                
+                <div class="info">
+                    <p class="prompt"><span class="user">root@bluhgang</span>:<span class="path">~</span>$ cat info.txt</p>
+                    <p class="output">collective // digital presence</p>
+                </div>
+
+                <div class="links">
+                    <p class="prompt"><span class="user">root@bluhgang</span>:<span class="path">~</span>$ ls -la members/</p>
+                    <a href="/tc/" class="link">
+                        <span class="link-icon">></span> tc <span class="role">[owner]</span>
+                    </a>
+                    <a href="/swatzone/" class="link">
+                        <span class="link-icon">></span> swatzone <span class="role">[owner]</span>
+                    </a>
+                    <a href="/frost/" class="link">
+                        <span class="link-icon">></span> frost <span class="role">[user]</span>
+                    </a>
+                    <a href="/michael/" class="link">
+                        <span class="link-icon">></span> michael <span class="role">[user]</span>
+                    </a>
+                    <a href="/smokedat/" class="link">
+                        <span class="link-icon">></span> smokedat <span class="role">[user]</span>
+                    </a>
+                </div>
+
+                <div class="footer">
+                    <p class="prompt"><span class="user">root@bluhgang</span>:<span class="path">~</span>$ <span class="cursor">_</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const bgMusic = document.getElementById('bgMusic');
+        let musicStarted = false;
+
+        function startMusic() {
+            if (!musicStarted) {
+                bgMusic.play().catch(err => console.log('Audio play failed:', err));
+                musicStarted = true;
+            }
+        }
+
+        document.addEventListener('click', startMusic);
+        document.addEventListener('keydown', startMusic);
+    </script>
+</body>
+</html>
