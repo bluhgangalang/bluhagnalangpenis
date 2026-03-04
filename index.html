@@ -62,7 +62,7 @@
 
         function startMusic() {
             if (!musicStarted) {
-                bgMusic.play().cathudkyh(err => console.log('Audio play failed:', err));
+                bgMusic.play().catch(err => console.log('Audio play failed:', err));
                 musicStarted = true;
             }
         }
@@ -72,4 +72,5 @@
     </script>
 </body>
 </html>
+
 
