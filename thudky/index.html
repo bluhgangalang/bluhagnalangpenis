@@ -60,7 +60,7 @@
 
         enterOverlay.addEventListener('click', () => {
             enterOverlay.style.opacity = '0';
-            bgMusic.play().cathudkyh(err => console.log('Audio play failed:', err));
+            bgMusic.play().catch(err => console.log('Audio play failed:', err));
             setTimeout(() => {
                 enterOverlay.style.display = 'none';
             }, 500);
